@@ -4,9 +4,9 @@ function dayOfProgrammer(year) {
   if (year < 1918) {
     if (year % 4 === 0) dayOfFebruary = 29;
   } else if (year > 1918) {
-    if (year % 400 === 0 || (year % 4 === 0 && year % 10 !== 0)) dayOfFebruary = 29;
+    if (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0)) dayOfFebruary = 29;
   } else {
-    dayOfFebruary = 19;
+    dayOfFebruary = 15;
   }
 
   let totalDay = 31 + dayOfFebruary + 31 + 30 + 31 + 30 + 31 + 31;
@@ -24,3 +24,5 @@ function dayOfProgrammer(year) {
 console.log(dayOfProgrammer(2017));
 console.log(dayOfProgrammer(2016));
 console.log(dayOfProgrammer(1800));
+console.log(dayOfProgrammer(1918));
+console.log(dayOfProgrammer(2440));
